@@ -9,10 +9,9 @@ import 'package:modelss/models/signup_model.dart';
 import 'package:modelss/models/user_model.dart';
 import 'package:modelss/riverpod/birthday_riverpod.dart';
 import 'package:modelss/riverpod/riverpod_management.dart';
+import 'package:modelss/url/url.dart';
 
 class Service {
-  final String baseUrl = 'https://twia.cloud';
-
 //Login
   Future<LoginModel?> loginCall(
       {required String telNo, required String password}) async {
