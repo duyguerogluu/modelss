@@ -12,7 +12,7 @@ import 'package:modelss/riverpod/riverpod_management.dart';
 import 'package:modelss/url/url.dart';
 
 class Service {
-//Login
+  //Login
   Future<LoginModel?> loginCall(
       {required String telNo, required String password}) async {
     Map<String, String> jsonData = {
