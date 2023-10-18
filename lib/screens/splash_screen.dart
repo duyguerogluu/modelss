@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:get_storage/get_storage.dart';
 import 'package:grock/grock.dart';
 import 'package:modelss/components/bottom_bar.dart';
+import 'package:modelss/functions/navigator_ext.dart';
 import 'package:modelss/loginPage/login_page.dart';
 import 'package:modelss/screens/discover_screen.dart';
 import 'package:modelss/screens/home_screen.dart';
@@ -20,9 +21,9 @@ class _SplashScreenState extends State<SplashScreen> {
     super.initState();
     Future.delayed(const Duration(seconds: 2), () {
       if (box.read("token") != null) {
-        Grock.toRemove(const BottomBar());
+        pushAndPopBack(const BottomBar());
       } else {
-        Grock.toRemove(const LoginPage());
+        pushAndPopBack(const LoginPage());
       }
     });
   }
@@ -36,7 +37,7 @@ class _SplashScreenState extends State<SplashScreen> {
           duration: Duration(seconds: 2),
           builder: (BuildContext context, double size, Widget? child) {
             return Text(
-              'Hoşgeldin Acoş',
+              'Hoşgeldiniz',
               style: TextStyle(fontSize: size, color: Colors.orange),
             );
           },
