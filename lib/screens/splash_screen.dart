@@ -23,7 +23,7 @@ class _SplashScreenState extends State<SplashScreen> {
       if (box.read("token") != null) {
         pushAndPopBack(const BottomBar());
       } else {
-        pushAndPopBack(const LoginPage());
+        pushAndPopBack(const BottomBar());
       }
     });
   }
